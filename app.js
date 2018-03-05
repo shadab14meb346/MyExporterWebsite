@@ -69,7 +69,7 @@ transporter.sendMail(mailOptions, function(error, info){
     console.log(error);
   } else {
     console.log('Email sent: ' + info.response);
-    res.send("Enquiry Sent Succesfully");
+    res.redirect("home");
   }
 });
 
