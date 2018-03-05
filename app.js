@@ -33,7 +33,7 @@ var storage= multer.diskStorage({
   }
 });
 
-var upload = multer({ storage : storage,limits:{fileSize:10}}).single('userPhoto');
+var upload = multer({ storage : storage,limits:{fileSize:100000}}).single('userPhoto');
 app.get('/uploader',function(req,res){
       res.render("uploader");
 });
