@@ -61,7 +61,7 @@ app.post("/",function(req,res){
        from:'shadab<crypto14meb346@gmail.com>',
        to:'shadabsaharsa@gmail.com',
        subject:'Website Submission',
-      html:"<p>You have a submission with the following details  Name<p>"+' '+req.body.Name+' '+'Email'+' '+req.body.email+'phone'+' '+req.body.number
+      text:"You have a submission with the following details  Name:"+' '+req.body.Name+' '+'Email:'+' '+req.body.email+' '+'phone:'+' '+req.body.number+' '+'message:'+' '+req.body.message
 };
 
 transporter.sendMail(mailOptions, function(error, info){
@@ -72,8 +72,6 @@ transporter.sendMail(mailOptions, function(error, info){
     res.redirect("/");
   }
 });
-
-    
 });
 
 
